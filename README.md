@@ -1,0 +1,1 @@
+This is just a small learning project where I'm building a chat client with Node.JS, Express, Jade and MongoDB.
