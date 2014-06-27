@@ -3,10 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}. This is a small application for real-time communication.
-  p Just enter a nickname of your liking and click 'enter chat' to begin.
+  p Create a new user or choose a existing one to start chatting.
   p &nbsp;
   
   p
-    input
+    a(href="/newuser") Add new user
   p
-    button Enter chat
+    a(href="/userlist") See existing users
