@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'NodeJS-chat' });
 });
 
-/* GET hello world page. */
+/* GET userlist. */
 router.get('/userlist', function(req, res) {
   var db = req.db;
   var collection = db.get('usercollection');
@@ -15,6 +15,20 @@ router.get('/userlist', function(req, res) {
       "userlist" : docs
     });
   });
+});
+
+/* GET New User page. */
+router.get('/newuser', function(req, res) {
+  res.render('newuser', { title: 'Add New User' });
+});
+
+/* POST to add New User page. */
+router.post('/adduser', function(req, res) {
+  
+  // Setting the internal DB-variable
+  var db = req.db;
+  
+  // Retrieveing the form values
 });
 
 module.exports = router;
