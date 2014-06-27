@@ -29,6 +29,25 @@ router.post('/adduser', function(req, res) {
   var db = req.db;
   
   // Retrieveing the form values
+  var userName = req.body.username;
+  var userEmail = req.body.useremail;
+  
+  // Setting collection
+  var collection = db.get('usercollection');
+  
+  // Submitting to DB
+  collection.insert({
+    "username" : userName,
+    "email" : userEmail
+  }, function (err, doc) {
+    if (err) {
+      res.send("A problem occured when trying to ad a new user to the database")
+    }
+    else {
+      res.location("userlist");
+      res.redirect("userlist");
+    }
+  });
 });
 
 module.exports = router;
