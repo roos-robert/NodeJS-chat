@@ -4,7 +4,9 @@ block content
   h1= title
   form#formAddUser(name="adduser", method="post",action="/adduser")
     input#inputUserName(type="text", placeholder="Your username", name="username")
+    &nbsp;
     input#inputUserEmail(type="text", placeholder="Your email", name="useremail")
-    button#btnSubmit(type="submit") submit
+    p
+    button#btnSubmit(type="submit") Add user
   p
     a(href="/") Index
